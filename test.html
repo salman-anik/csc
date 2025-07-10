@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cyber Security Club</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0f0f0f;
+      color: #00ff99;
+      font-family: 'Courier New', monospace;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .typewriter {
+      font-size: 2rem;
+      white-space: nowrap;
+      border-right: 2px solid #00ff99;
+      width: fit-content;
+      overflow: hidden;
+      animation: blinkCursor 0.7s step-end infinite;
+    }
+
+    @keyframes blinkCursor {
+      50% { border-color: transparent; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="welcomeText" class="typewriter"></div>
+
+  <script>
+    const text = "Welcome to the Cyber Security Club!";
+    const element = document.getElementById("welcomeText");
+    let index = 0;
+
+    function typeEffect() {
+      if (index < text.length) {
+        element.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 80); // speed of typing
+      }
+    }
+
+    window.onload = () => {
+      setTimeout(typeEffect, 300); // slight delay before typing starts
+    };
+  </script>
+
+</body>
+</html>

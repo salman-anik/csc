@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Security Club</title>
+  <link rel="stylesheet" href="tictac.css">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Share Tech Mono', monospace;;
+
+    }
+    html{
+      scroll-behavior: smooth;
+    }
+    body{
+      width: 100vw;
+      overflow-x: hidden;
+    }
+    a{
+      text-decoration: none;
+      color: white;
+    }
+    
+    .typewriter {
+      color: rgb(11, 126, 228);
+      white-space: nowrap;
+      font-weight: bolder;
+      border-right: 2px solid #eeeff0;
+      width: fit-content;
+      overflow: hidden;
+      animation: blinkCursor 0.7s step-end infinite;
+    }
+
+    @keyframes blinkCursor {
+      50% { border-color: transparent; }
+    }
+    .logo{
+      width: 40px;
+      height: 40px;
+      position: fixed;
+      background-color: red;
+      z-index: 100;
+      background: url(Assets/logo.jpg);
+      background-position: center;
+      background-size: contain;
+    }
+    nav{
+      position: fixed;
+      z-index: 99;
+      height: 8vh;
+      color: white;
+      display: grid;
+      place-items: center;
+      width: 100vw;
+      left: 50%;
+      transform: translateX(-50%);
+      backdrop-filter: blur(15px);
+        ul{
+          width: 60vw;
+          display: flex;
+          justify-content: space-around;
+          li{
+            list-style-type: none;
+            padding: 10px;
+            font-size: 0.8rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0);
+
+          }
+          li:nth-child(2){
+            border-bottom: solid 1px white;
+            transition: all 2s ease;
+          }
+          li:nth-child(2):hover{
+          }
+          li:hover{
+                  border-bottom: 1px solid white;
+                  transition: all 0.5s ease;
+          }
+        }
+    }
+
+section {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: scroll;      
+  scroll-behavior: smooth;
+  position: relative;
+  scroll-snap-type: none;
+}
+
+    section>div:first-child{
+      height: 100vh;
+    }
+    section>div{
+      min-height: 100vh;
+      width: 100vw;
+      scroll-snap-align: none;
+    }
+    @media only screen and (min-width: 800px) {
+    section{
+              scroll-snap-type: y mandatory;
+
+    }
+        section>div{
+                  scroll-snap-align: start;
+        }
+}
+    @media only screen and (max-width: 800px) {
+      .g2{
+        display: none;
+      }
+      .git2{
+        display: none;
+      }
+      .gif1 img{
+        display: none;
+      }
+      .g1,.gif2{
+        position: absolute;
+        left: 10vw;
+      }
+      .git1{
+        position: absolute;
+        right: 10vw;
+      }
+  }
+    #div1{
+      background: linear-gradient(rgba(0, 0, 0, 0.267), rgba(14, 23, 79, 0.584)),url(Assets/t2.jpg);
+      background-position: center 5vh;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      display: grid;
+      place-items: center;
+      gap: 0px;
+              .quo {
+                width: 80vw;
+                height: 10vh;
+                top: 0;
+                z-index: 1000;
+                border-radius: 10px;
+                background-color: rgba(255, 255, 255, 0.1); /* semi-transparent */
+                backdrop-filter: blur(15px); /* glass blur */
+                -webkit-backdrop-filter: blur(15px); /* Safari support */
+                border: 1px solid rgba(255, 255, 255, 0.3); /* subtle border */
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* soft shadow */
+                transition: all 0.3s ease;
+                display: grid;
+                place-items: center;
+            }
+    }
+    #div2{
+      background: linear-gradient( rgba(14, 23, 79, 0.863),rgba(0, 0, 0, 0.813)),url(Assets/t3.jpg);
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      display: grid;
+      place-items: center;
+      >div{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 90vw;
+        padding: 30px;
+        div{
+          margin: 20px;
+          margin-top: 30px;
+        }
+        .g1{
+          width: 400px;
+          color: white;
+          h1{
+            font-size: 2.2rem;
+          }
+          p{
+            margin: 15px;
+            line-height: 2;
+            margin-left: -10px;
+          }
+        }
+        .g2{
+          text-align: center;
+        }
+      }
+    }
+    #div3{
+       display: grid;
+       place-items: center;
+        >div{
+        width: 100vw;
+        height: 80vh;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 50px;
+          .git1{
+          width: 500px;
+          color: white;
+          h1{
+            font-size: 2.2rem;
+          }
+          p{
+            margin: 15px;
+            line-height: 2;
+            margin-left: -10px;
+          }
+        }
+        .git2::-webkit-scrollbar {
+            display: none; /* Chrome, Safari */
+        }
+         .git2{
+            overflow-y: hidden;
+            width: 500px;
+            max-height: 60vh;
+            overflow-y: scroll;
+            scrollbar-width: none; /* Firefox */
+           -ms-overflow-style: none; /* IE 10+ */
+              h2 {
+                  text-align: center;
+                  margin-bottom: 20px;
+                  color: #79c0ff;
+                }
+                .repo {
+                  background: #161b22;
+                  border: 1px solid #30363d;
+                  border-radius: 8px;
+                  padding: 15px;
+                  margin-bottom: 15px;
+                }
+                .repo a {
+                  color: #58a6ff;
+                  font-weight: bold;
+                  font-size: 1.2em;
+                  text-decoration: none;
+                }
+                .repo a:hover {
+                  text-decoration: underline;
+                }
+                .desc {
+                  margin-top: 8px;
+                  color: #8b949e;
+                }
+                .info {
+                  margin-top: 10px;
+                  font-size: 0.9em;
+                  color: #8b949e;
+                }
+          }
+      }
+    }
+    #div4{
+       display: grid;
+       place-items: center;
+        >div{
+        width: 100vw;
+        height: 80vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 50px;
+       .gif2{
+          width: 500px;
+          color: white;
+          h1{
+            font-size: 2.2rem;
+          }
+          p{
+            margin: 15px;
+            line-height: 2;
+            margin-left: -10px;
+          }
+        }
+        .gif1{
+          width: 500px;
+          display: grid;
+          place-items: center;
+           img{
+            width: 500px;
+           }
+        }
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo"></div>
+  <nav>
+    <ul>
+      <li><a href="#div1">HOME</a></li>
+      <li><a href="#div2">Why should you join?</a></li>
+      <li><a href="#div3">ABOUT US</a></li>
+    </ul>
+  </nav>
+  <section>
+    <div id="div1">
+      <div class="quo">
+          <p id="quote"><div id="welcomeText" class="typewriter"></div></p>
+      </div>
+    </div>
+    <div id="div2">
+          <div>
+               <div class="g1">
+                   <h1>Why Join a Cybersecurity Club?</h1>
+                    <p>Joining a cybersecurity club opens the door to an exciting world of digital defense and ethical hacking.
+                      It’s where curiosity meets real-world skills, and where passion turns into purpose. Whether you're fascinated by hacking, eager to protect systems, or just curious about how the internet really works — this is your launchpad.
+                    </p>
+               </div>
+               <div class="g2">
+                    <div id="game">
+                          <div class="cell" data-index="0"></div>
+                          <div class="cell" data-index="1"></div>
+                          <div class="cell" data-index="2"></div>
+                          <div class="cell" data-index="3"></div>
+                          <div class="cell" data-index="4"></div>
+                          <div class="cell" data-index="5"></div>
+                          <div class="cell" data-index="6"></div>
+                          <div class="cell" data-index="7"></div>
+                          <div class="cell" data-index="8"></div>
+                        </div>
+
+                        <div id="status">Your turn (X)</div>
+                        <button id="restart">Restart Game</button>
+               </div>
+          </div>
+    </div>
+    <div id="div3">
+            <div>
+               <div class="git1">
+                   <h1>What Can You Gain from Cybersecurity?</h1>
+                    <p>Cybersecurity isn’t just about hacking — it’s about understanding the systems that power our world and knowing how to protect them. By diving into this field, you gain critical thinking, technical expertise, and the confidence to solve real problems in a high-stakes digital environment.
+                      Whether you dream of becoming a white-hat hacker, a digital forensics expert, or just want to keep your data safe — this journey starts here. In a world that’s constantly under digital attack, cybersecurity isn’t optional — it’s essential.
+                    </p>
+               </div>
+             <div class="git2">
+                <h2>Trending Cybersecurity Repository</h2>
+                <div id="repos">Loading...</div>
+            </div>
+           </div>
+    </div>
+          <div id="div4">
+               <div>
+               <div class="gif1">
+                 <div><img src="Assets/gif1.gif" alt=""></div>
+             </div>
+               <div class="gif2">
+                   <h1>What Career Opportunities Are There in Cybersecurity?</h1>
+                    <p>Cybersecurity isn’t just a cool hobby — it’s one of the most in-demand, high-paying career paths in the world today. As technology grows, so do threats — and every company, government, and organization needs skilled defenders.
+                      Whether you’re into coding, problem-solving, writing reports, or analyzing patterns, there’s a role for you in cybersecurity.
+                    </p>
+               </div>
+    
+           </div>
+  </section>
+    <div class="sec2">
+             
+    </div>
+</body>
+<script src="tictac.js"></script>
+<script>
+  //welcome
+      const text = "Welcome to the Cyber Security Club!";
+    const element = document.getElementById("welcomeText");
+    let index = 0;
+
+    function typeEffect() {
+      if (index < text.length) {
+        element.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 80); // speed of typing
+      }
+    }
+
+    window.onload = () => {
+      setTimeout(typeEffect, 300); // slight delay before typing starts
+    };
+
+//for latest githib project
+ async function fetchTrendingRepos() {
+    const query = 'topic:cybersecurity sort:stars';
+    const url = `https://api.github.com/search/repositories?q=${encodeURIComponent(query)}&order=desc&per_page=5`;
+    
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        document.getElementById('repos').innerText = 'Failed to load repos.';
+        return;
+      }
+      const data = await response.json();
+      const reposDiv = document.getElementById('repos');
+      reposDiv.innerHTML = '';
+
+      data.items.forEach(repo => {
+        const repoDiv = document.createElement('div');
+        repoDiv.className = 'repo';
+        repoDiv.innerHTML = `
+          <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">${repo.full_name}</a>
+          <div class="desc">${repo.description || 'No description'}</div>
+          <div class="info">⭐ ${repo.stargazers_count} | Forks: ${repo.forks_count} | Language: ${repo.language || 'N/A'}</div>
+        `;
+        reposDiv.appendChild(repoDiv);
+      });
+    } catch (err) {
+      console.error(err);
+      document.getElementById('repos').innerText = 'Error fetching repos.';
+    }
+  }
+  fetchTrendingRepos();
+
+</script>
+</html>
