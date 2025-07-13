@@ -1,62 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cyber Security Club</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cyber Security Club Footer</title>
+
+  <!-- ✅ Font Awesome CDN for Social Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-papbCf7eEUSpuyPdaP+JpcoQWdGTTZPZCw2mhnxuLPXp0F5BrW9SKlkCJcJtcL5BME3S9BtZfZkSmglYVYZrUA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f172a;
+      color: #cbd5e1;
     }
 
-    body {
-      background-color: #0f0f0f;
-      color: #00ff99;
-      font-family: 'Courier New', monospace;
-      height: 100vh;
+    .footer {
+      background-color: #1e293b;
+      padding: 40px 80px;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-top: 2px solid #334155;
     }
 
-    .typewriter {
-      font-size: 2rem;
-      white-space: nowrap;
-      border-right: 2px solid #00ff99;
-      width: fit-content;
-      overflow: hidden;
-      animation: blinkCursor 0.7s step-end infinite;
+    .footer .about {
+      max-width: 500px;
     }
 
-    @keyframes blinkCursor {
-      50% { border-color: transparent; }
+    .footer .about h2 {
+      font-size: 24px;
+      color: #f8fafc;
+      margin-bottom: 10px;
+    }
+
+    .footer .about p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #94a3b8;
+    }
+
+    .footer .social {
+      text-align: right;
+    }
+
+    .footer .social h2 {
+      font-size: 20px;
+      color: #f8fafc;
+      margin-bottom: 10px;
+    }
+
+    .footer .social-icons {
+      display: flex;
+      gap: 15px;
+      justify-content: flex-end;
+    }
+
+    .footer .social-icons a {
+      color: #cbd5e1;
+      font-size: 22px;
+      transition: color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .footer .social-icons a:hover {
+      color: #38bdf8;
     }
   </style>
 </head>
 <body>
 
-  <div id="welcomeText" class="typewriter"></div>
+  <!-- Your main site content -->
+  <div style="min-height: 80vh;"></div>
 
-  <script>
-    const text = "Welcome to the Cyber Security Club!";
-    const element = document.getElementById("welcomeText");
-    let index = 0;
-
-    function typeEffect() {
-      if (index < text.length) {
-        element.textContent += text.charAt(index);
-        index++;
-        setTimeout(typeEffect, 80); // speed of typing
-      }
-    }
-
-    window.onload = () => {
-      setTimeout(typeEffect, 300); // slight delay before typing starts
-    };
-  </script>
+  <!-- Cyber Security Club Footer -->
+  <footer class="footer">
+    <div class="about">
+      <h2>About the Club</h2>
+      <p>
+        The Cyber Security Club is a student-driven initiative focused on digital safety,
+        ethical hacking, awareness campaigns, and real-world skills. We aim to create a secure future through
+        knowledge sharing and collaboration.
+      </p>
+    </div>
+    <div class="social">
+      <h2>Connect with Us</h2>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-discord"></i></a>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
